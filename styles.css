@@ -162,7 +162,8 @@
   * a {
     background-color: transparent;
     color: var(--color-accent-fg);
-    text-decoration: none;
+    text-decoration: underline;
+    padding-left: 0;
   }
   
   * abbr[title] {
@@ -181,7 +182,6 @@
   }
   
   * h1 {
-    margin: .67em 0;
     font-weight: var(--base-text-weight-semibold, 600);
     padding-bottom: .3em;
     font-size: 2em;
@@ -380,12 +380,18 @@
   
   * h1,
   * h2,
-  * h3,
   * h4,
   * h5,
   * h6 {
     margin-top: 24px;
-    margin-bottom: 16px;
+    margin-bottom: 5px;
+    font-weight: var(--base-text-weight-semibold, 600);
+    line-height: 1.25;
+  }
+
+  * h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-weight: var(--base-text-weight-semibold, 600);
     line-height: 1.25;
   }
@@ -486,17 +492,6 @@
     margin-right: var(--base-size-8, 8px) !important;
   }
   
-  *::before {
-    display: table;
-    content: "";
-  }
-  
-  *::after {
-    display: table;
-    clear: both;
-    content: "";
-  }
-  
   *>*:first-child {
     margin-top: 0 !important;
   }
@@ -525,7 +520,6 @@
     outline: none;
   }
   
-  * p,
   * blockquote,
   * ul,
   * ol,
@@ -535,6 +529,12 @@
   * details {
     margin-top: 0;
     margin-bottom: 16px;
+  }
+
+  * p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
   }
   
   * blockquote>:first-child {
@@ -657,7 +657,7 @@
   }
   
   * li+li {
-    margin-top: .25em;
+    margin-top: 0;
   }
   
   * dl {
