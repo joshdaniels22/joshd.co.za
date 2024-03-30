@@ -12,17 +12,17 @@ import myArticles from "../data/articles";
 
 import "./styles/articles.css";
 
-const Articles = () => {
+const CV = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const currentSEO = SEO.find((item) => item.page === "articles");
+	const currentSEO = SEO.find((item) => item.page === "cv");
 
 	return (
 		<React.Fragment>
 			<Helmet>
-				<title>{`Articles | ${INFO.main.title}`}</title>
+				<title>{`CV | ${INFO.main.title}`}</title>
 				<meta name="description" content={currentSEO.description} />
 				<meta
 					name="keywords"
@@ -31,7 +31,7 @@ const Articles = () => {
 			</Helmet>
 
 			<div className="page-content">
-				<NavBar active="articles" />
+				<NavBar active="cv" />
 				<div className="content-wrapper">
 					<div className="articles-logo-container">
 						<div className="articles-logo">
@@ -40,31 +40,13 @@ const Articles = () => {
 					</div>
 
 					<div className="articles-main-container">
-						<div className="title articles-title">
-							{INFO.articles.title}
-						</div>
-
-						<div className="subtitle articles-subtitle">
-							{INFO.articles.description}
-						</div>
 
 						<div className="articles-container">
-							<div className="articles-wrapper">
-								{myArticles.map((article, index) => (
-									<div
-										className="articles-article"
-										key={(index + 1).toString()}
-									>
-										<Article
-											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
-											link={"/article/" + (index + 1)}
-										/>
-									</div>
-								))}
-							</div>
+						<iframe src="https://joshd.co.za"></iframe>
+							<a href="https://joshd.co.za">cv link</a>
+						
+						
+
 						</div>
 					</div>
 					<div className="page-footer">
@@ -76,4 +58,4 @@ const Articles = () => {
 	);
 };
 
-export default Articles;
+export default CV;
